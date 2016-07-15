@@ -1,0 +1,13 @@
+{% extends 'kemence_app/base.html' %}
+
+{% block content %}
+
+    {% for furnace in furnaces %}
+        <div class="post">
+            <h1><a href="">{{ furnace.name }}</a></h1>
+            <img src="{{ furnace.image.url }}" >
+            <p>{{ furnace.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+
+{% endblock content %}
